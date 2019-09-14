@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <!-- Background + Grid Design -->
+    <div id="colourBG">
+        <div id="gridBG"></div>
+    </div>
+
+    <!-- Main Game Content -->
+    <div class="container">
+
+        <!-- Heading: RPS Game! -->
+        <div class="row">
+            <header class="col-12 mt-5 text-center">
+                <h1><span class="bg-highlight pl-4 pr-2">Rock,</span>
+                    <span class="bg-highlight pl-3 pr-3">Paper,</span>
+                    <span class="bg-highlight pl-3 pr-4">Scissors</span></h1>
+                <h2><span class="bg-highlight pl-3 pr-4">PvP GAME!</span></h2>
+            </header>
+        </div>
+
+        <!-- Waiting Screen -->
+        <div id="waitingScreen" class="row">
+            <main class="col-12 mt-5 text-center d-flex align-items-center">
+                <div class="w-100 text-center">
+                    <!-- IMG + Text -->
+                    <img src="assets/waiting-01.gif" class="waitingGIF">
+                    <h2 class="mt-5">waiting for another player...</h2>
+                    <p>#pro tip: share the link with your friends to play</p>
+
+                    <!-- Name Form submit -->
+                    <form class="col-10 col-md-4 mx-auto input-group mt-5">
+                        <input id="username" type="text" class="form-control" placeholder="Your username" aria-label="Your username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button id="addName" class="btn btn-purple" type="button">Ready</button>
+                        </div>
+                    </form>
+
+                    <div class="col-12 text-center mt-2" id="addUseText"></div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="row d-none">
+            <main class="col-12 text-center mt-5">
+                <!-- Player vs Player Text -->
+                <div class="col-12">
+                    <div class="row text-center mb-3">
+                        <div id="playerName1" class="col-5"></div>
+                        <h1 class="col-2"><span class="bg-highlight pl-3 pr-2">VS.</span></h1>
+                        <div id="playerName2" class="col-5"></div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center mb-5">
+                    <div class="row">
+                        <h2 class="col-12 text-center">Countdown 10s</h2>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-8 mt-3 mx-auto">
+                    <div class="row">
+                        <!-- Rock Button -->
+                        <div class="col-4">
+                            <img src="assets/rock.png" class="w-100">
+                        </div>
+                        <!-- Paper Button -->
+                        <div class="col-4">
+                            <img src="assets/paper.png" class="w-100">
+                        </div>
+                        <!-- Scissors -->
+                        <div class="col-4">
+                            <img src="assets/scissors.png" class="w-100">
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </main>
+        </div>
+
+
+    </div>
+
+    <!-- Bottom Fixed - Game Information -->
+    <footer class="fixed-bottom pb-5 pt-2 text-center">
+        <div class="row">
+            <!-- Session Status -->
+            <div class="col-4">
+                <p><span class="bg-highlight pl-2 pr-2">Session</span></p>
+                <p class="mt-2"><span class="bg-highlight pl-2 pr-2">Live</span></p>
+            </div>
+            <!-- Player Number in Game -->
+            <div class="col-4">
+                <p><span class="bg-highlight pl-3 pl-2 pr-2">Players # </span></p>
+                <p class="mt-2"><span class="bg-highlight pl-2 pr-2">Two </span></p>
+            </div>
+            <!-- Wins + Losses -->
+            <div class="col-4">
+                <p><span class="bg-highlight pl-3 pl-2 pr-2">Wins: </span></p>
+                <p class="mt-2"><span class="bg-highlight pl-2 pr-2">Losses: </span></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+    <!-- Main JS for game -->
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>

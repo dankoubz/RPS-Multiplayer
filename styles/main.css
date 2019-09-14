@@ -1,0 +1,110 @@
+html {
+    background: #1a1a1a;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Gochi Hand', cursive;
+    height: 100vh;
+    color: black;
+}
+
+
+/* Text + Fonts + Styling */
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 0;
+}
+
+.bg-highlight {
+    background: white;
+    border-radius: 20px 5px 10px 5px;
+}
+
+span.bg-highlight:hover {
+    transform: scale(1.2);
+}
+
+
+/* Backgrounds */
+
+#colourBG {
+    background: linear-gradient(#58009c, transparent), linear-gradient(to top left, #00f29d, transparent), linear-gradient(to top right, #24009c, transparent);
+    background-blend-mode: screen;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#gridBG {
+    background-image: url('../assets/rps-bg01.png');
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.25;
+    position: relative;
+    z-index: 0;
+}
+
+
+/* Main Sections */
+
+main#waitingScreen {
+    height: 60vh;
+}
+
+
+/* Images + Animations */
+
+img.waitingGIF {
+    width: 150px;
+    transition: 1s ease;
+}
+
+img {
+    transition: 1s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Buttons */
+
+button.btn-purple {
+    background: #b861fa;
+    color: white;
+}
+
+button.btn-purple:hover {
+    background: #8b3fc4;
+    color: white;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 767px) {
+    main#waitingScreen {
+        height: 60vh;
+    }
+    img.waitingGIF {
+        width: 125px;
+    }
+    h1,
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+}
